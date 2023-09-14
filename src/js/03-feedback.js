@@ -9,8 +9,8 @@ formEl.addEventListener('submit', onFormSubmitHandler);
 updateForm();
 
 function onInputHandler(event) {
-    const emailValue = event.currentTarget.elements.email.value;
-    const messageValue = event.currentTarget.elements.message.value;
+    const emailValue = event.currentTarget.email.value;
+    const messageValue = event.currentTarget.message.value;
 
     parsetData = {
        email: emailValue,
@@ -23,7 +23,7 @@ function onInputHandler(event) {
 function onFormSubmitHandler(event) {
     event.preventDefault();
     const { email, message } = event.currentTarget.elements;
-    
+
     if (email.value === '' || message.value === '') {
         return alert("All fields must be filed");
     }
